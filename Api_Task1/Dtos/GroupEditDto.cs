@@ -2,8 +2,7 @@
 {
     public class GroupEditDto
     {
-        public string No { get; set; }
-        public byte Limit { get; set; }
-        public DateTime ModifiedAt { get; set; } = DateTime.Now;
+        public string? No { get; set; }
+        public byte? Limit { get; set; }
     }
 }

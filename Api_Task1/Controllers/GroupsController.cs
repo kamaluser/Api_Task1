@@ -74,10 +74,15 @@ namespace Api_Task1.Controllers
             {
                 return NotFound();
             }
-
-            group.No = dto.No;
-            group.Limit = dto.Limit;
-            group.ModifiedAt = dto.ModifiedAt;
+            if (dto.No != null)
+            {
+                group.No = dto.No;
+            }
+            if(dto.Limit != null)
+            {
+                group.Limit = dto.Limit.Value;
+            }
+            group.ModifiedAt = DateTime.Now;
 
             _context.SaveChanges();
 
